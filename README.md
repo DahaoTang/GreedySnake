@@ -10,8 +10,6 @@ In order to run this project, you need to have ==Gradle== and ==Java 8== install
 
 __*It’s highly recommended to use ==sdkman== to install Gradle and Java 8 and switch between different Java versions.*__
 
-![Screen Shot 2021-12-28 at 23.58.12](README.assets/Screen Shot 2021-12-28 at 23.58.12.png)
-
 
 
 ## User Guide
@@ -33,8 +31,6 @@ gradle build
 ```bash
 gradle run
 ```
-
-![Screen Shot 2021-12-28 at 23.56.22](README.assets/Screen Shot 2021-12-28 at 23.56.22-0707871.png)
 
 
 
