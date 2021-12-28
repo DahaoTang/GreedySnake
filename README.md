@@ -6,9 +6,9 @@
 
 This is a Java project built using Gradle.
 
-In order to run this project, you need to have ==Gradle== and ==Java 8== installed and used.
+In order to run this project, you need to have `Gradle` and `Java 8` installed and used.
 
-__*It’s highly recommended to use ==sdkman== to install Gradle and Java 8 and switch between different Java versions.*__
+__*It’s highly recommended to use `sdkman` to install Gradle and Java 8 and switch between different Java versions.*__
 
 
 
