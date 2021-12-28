@@ -12,7 +12,7 @@ __*It’s highly recommended to use `sdkman` to install Gradle and Java 8 and sw
 
 
 
-## User Guide
+## User's Guide
 
 1. Git clone this repo:
 
