@@ -12,9 +12,9 @@ __*It’s highly recommended to use `sdkman` to install Gradle and Java 8 and sw
 
 
 
-## User Guide
+## User's Guide
 
-1. Git clone this repo:
+1. Git clone this repo using SSH:
 
 ```bash
 git clone git@github.com:DahaoTang/GreedySnake.git
