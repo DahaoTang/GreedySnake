@@ -79,6 +79,8 @@ public class HeadNode extends Node {
         this.timer++;
         if (this.timer > SECONDS_BETWEEN_MOVES * App.FPS) {
 
+            // Provent the snake from being hitting to its second node, 
+            // and change the direction, and move.
             if (this.direction == Direction.UP) {
                 if (!(this.nextNode.getX() == this.x && this.nextNode.getY() == this.y - App.NodeHeight)) {
                     this.y -= App.NodeHeight;

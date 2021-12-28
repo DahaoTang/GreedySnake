@@ -13,6 +13,7 @@ public class Food extends PApplet {
         this.x = x;
         this.y = y;
 
+        // Prevent the newly added food from being placed somewhere unreachable.
         if (this.x == 0) {
             this.x += App.NodeHeight;
         } else if (this.x == App.WIDTH) {

@@ -28,16 +28,19 @@ public class App extends PApplet {
 
     public App() {
 
-        this.screen = 1;
+        this.screen = 1; // switch between game window and game over window
 
         nodeList = new ArrayList<Node>();
 
         this.headNode = new HeadNode(WIDTH / 2, HEIGHT / 2, Direction.UP, null);
 
         this.nodeList.add(headNode);
+
+        // The snake starts the game with the length 2
         this.nodeList.add(new Node(this.headNode.getX(), this.headNode.getY() + NodeHeight, null));
         this.headNode.setNextNode(nodeList.get(1));
 
+        // Init the first random food
         this.random = new Random();
         this.food = new Food(
             this.random.nextInt(WIDTH / NodeWidth) * NodeWidth + NodeWidth / 2, 
@@ -49,16 +52,18 @@ public class App extends PApplet {
         size(WIDTH, HEIGHT);
     }
 
-    public void setup()
-    {
+    public void setup() {
         frameRate(FPS);
     }
 
     public void draw() {
-        rect(0, 0, 800, 600);
+        rect(0, 0, 800, 600); // emptry window; prepare for redrawing
         background(32, 32, 32);
 
+        // Game starts
         if (this.screen == 1) {
+            // One and only one food shows on screen.
+            // Once the food is eaten, a new food appears at a random position.
             if (!this.food.getEaten()) {
                 this.food.draw(this);
             } else {
@@ -66,14 +71,19 @@ public class App extends PApplet {
                     this.random.nextInt(WIDTH / NodeWidth) * NodeWidth + NodeWidth / 2, 
                     this.random.nextInt(HEIGHT / NodeHeight) * NodeHeight + NodeHeight / 2
                     );
+                // The snake increases its length by 1 if ate a food.
                 addNode();
+                // The speed of the snake gets faster as the snake gets longer.
+                // There is a max speed.
                 if (this.headNode.getSpeed() > 0.02 ) {
                     this.headNode.increaseSpeed();
                 }
             }
     
+            // Loop through the snake
             for (Node node: this.nodeList) {
                 if (node != this.headNode) {
+                    // If the snake is dead, switch to game over window.
                     if (this.headNode.checkDead(node)) {
                         this.headNode.changeDirection(null);
                         this.screen++;
@@ -85,6 +95,7 @@ public class App extends PApplet {
             }
         }
 
+        // Game over window
         else if (this.screen == 2) {
             textSize(60);
             text("Game Over", WIDTH / 2 - 160, HEIGHT / 2);
@@ -108,7 +119,7 @@ public class App extends PApplet {
         } else if (this.keyCode == 32) {
             this.headNode.changeDirection(null); // stop
         } else if (this.keyCode == KeyEvent.VK_R) {
-            restart();
+            restart(); // restart at anytime
         }
     }
 
@@ -121,6 +132,7 @@ public class App extends PApplet {
         lastNode.setNextNode(this.nodeList.get(this.nodeList.size() - 1));
     }
 
+    // Reset the game
     private void restart() {
         rect(0, 0, 800, 600);
 

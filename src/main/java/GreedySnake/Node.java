@@ -13,7 +13,7 @@ public class Node {
 
     protected Node nextNode;
 
-    protected Direction direction;
+    protected Direction direction; // for headnode only; headnode is included in the nodelist
 
     protected int timer;
 
@@ -49,6 +49,9 @@ public class Node {
         this.direction = newDirection;
     }
 
+    // Starting from the second node, the node will go to the place of its previous node
+    // when the previous node changes its position.
+    // The node will record its previous position for the next node.
     public void tick() {
         if (this.x != this.xMem || this.y != this.yMem) {
             if (this.nextNode != null) {
@@ -86,6 +89,7 @@ public class Node {
         return this.direction;
     }
 
+    // The snake dies, if it hits itself or the wall.
     public boolean checkDead(Node node) {
         if (node.getX() == this.x && node.getY() == this.y) {
             return true;
@@ -98,5 +102,4 @@ public class Node {
         }
         return false;
     }
-
 }
