@@ -16,9 +16,13 @@ __*NOTE: Java and Jre are needed to run the game.*__
 
 
 
+
+
 To run this project using Gradle, you need to have `Gradle` and `Java 8` installed and used.
 
 __*It’s highly recommended to use `sdkman` to install Gradle and Java 8 and switch between different Java versions.*__
+
+
 
 
 
@@ -41,6 +45,8 @@ gradle build
 ```bash
 gradle run
 ```
+
+
 
 
 
