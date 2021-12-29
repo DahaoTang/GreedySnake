@@ -75,7 +75,7 @@ public class App extends PApplet {
                 addNode();
                 // The speed of the snake gets faster as the snake gets longer.
                 // There is a max speed.
-                if (this.headNode.getSpeed() > 0.02 ) {
+                if (this.headNode.getSpeed() > 0.05 ) {
                     this.headNode.increaseSpeed();
                 }
             }
