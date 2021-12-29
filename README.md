@@ -6,7 +6,7 @@
 
 This is a Java project built using Gradle.
 
-To run the project, go to the `game` folder, then `bin`.
+To run the project, go to the `GreedySnake` folder, then `bin`.
 
 If you are using Microsoft Windows system, double click `GreedySnake.bat` to run the game; 
 
