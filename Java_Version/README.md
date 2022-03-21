@@ -20,7 +20,7 @@ __*NOTE: Java and Jre are needed to run the game.*__
 
 To run this project using Gradle, you need to have `Gradle` and `Java 8` installed and used.
 
-__*It’s highly recommended to use `sdkman` to install Gradle and Java 8 and switch between different Java versions.*__
+__*It’s highly recommended to use `sdkman` to install Java 8 and switch between different Java versions.*__
 
 
 
@@ -52,10 +52,10 @@ gradle run
 
 ## Game Instruction
 
-Use the arrow keys or “W”, “A”, “S”, “D” to change the direction the snake will move in.
+Use the arrow keys or “`W`”, “`A`”, “`S`”, “`D`” to change the direction the snake will move in.
 
-Use the space key to pause the snake. To continue, change the direction of the snake according to the instruction mentioned above.
+Use the `space key` to pause the snake. To continue, change the direction of the snake according to the instruction mentioned above.
 
 If the snake hit itself or any of the walls, the game is over. 
 
-Press “R” to restart the game at anytime.
+Press “`R`” to restart the game at anytime.
