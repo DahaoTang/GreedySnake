@@ -7,4 +7,4 @@ For the Python version, it is implemented with pygame.
 
 The biggest difference between the two versions is that, in the Java version, the speed of the snake increases as it eats more food, while in the Python version, the speed of the snake is consistent.
 
-The detailed descriptions of the two versions can be found in the folders respectively.
+The detailed descriptions of the two versions can be found in their folders respectively.
